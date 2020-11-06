@@ -1,0 +1,447 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : sans-serif;
+			color : white;
+			background-color : #21489e;
+			padding: 0.3em;
+		}
+		body {
+			font-family : verdana;
+		}
+		td, th {
+			padding: 0.5em;
+			text-align : center;
+			width : 18%;
+		}
+		th {
+			background-color : #A6CAF0;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+		}
+		
+		.DRC_summary_header {							
+			padding-bottom : 0.1em;
+			border : 0px solid black;							
+			width: 100%;
+                        align: right;
+                        
+		}
+
+		.DRC_summary_header_col1, 
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3
+		{
+			color : black;
+			font-size:150%;
+                        padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2: 0em;
+			border : 0px solid black;
+			width : auto;
+			vertical-align: top;
+			font-weight: bold;				
+		}
+		
+		.DRC_summary_header_col1 	
+		{		                       
+			text-align: right;
+                        width: auto;	
+		}
+
+		.DRC_summary_header_col2 	
+		{		
+			text-align: center;	
+		}
+
+		.DRC_summary_header_col3 	
+		{		
+			text-align: left;	
+		}
+
+
+		
+		.header_holder
+		{
+		Width = 100%;
+		border = 0px solid green;
+		padding = 0;
+		}
+		
+		
+		
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+                {
+			left:0;
+			top:0;
+			padding-top : 0.1em;			
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top
+
+		}
+		.front_matter {	
+			
+			margin-top: 5px;
+ 			margin-left: 0px;					 			
+ 			horizontal-align: left;
+		}
+				
+		
+		.front_matter_column1 {
+			width : 10em;	
+			text-align  : right;
+			padding-right:0.1em;
+			
+		}
+		
+		.front_matter_column2 {
+                        width: 0.1em;
+			align: center;
+			text-align : center;
+			margin-right  : 0.1em;	
+			margin-left   : 0.1em;
+		}
+		.front_matter_column3 {
+			width         : auto;  
+			text-align    : left;	
+			margin-right  : 0.5em;				
+		}
+		
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : right;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #EEEEE0 
+		}
+		tr.onmouseout_even { 
+			background-color : #F3F3E3   
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : lightYellow
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #008000 
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD14\Templates\AD-rgb_logo_223x64.gif
+		"><a href="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports" class="customize"><acronym title="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports">customize</acronym></a><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td Style="width:70%">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">11/3/2020</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">11:08:29 AM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">00:00:06</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3"><a href="file:///C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc" class="file"><acronym title="C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc">C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td Style="Width:30%">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings</td>
+<td class="DRC_summary_header_col2">:</td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations</td>
+<td class="DRC_summary_header_col2">:</td>
+<td class="DRC_summary_header_col3" style="color : red">17</td></tr>
+</table>
+</td>
+</table>
+<hr><a name="ID0Q2C1KSWHF4MG2041ZUWQIWUCO3XT4G0ZTOS5NDTM5OJYLL3ECYE"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDU1UJSP054HUMOPGV1PRRZMJBNHA3AZZM5IUCFVEBMIKXAONIIMYE">Clearance Constraint (Gap=0mm) (ispad and InComponent('Q1')),(IsFill)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID45RAGLRX343QDHUSWVS15P2GBFEP3BRKZNYL3QM0UOYZUYHKZJSD">Matched Net Lengths(Tolerance=0.2mm) (InDifferentialPair('CK2'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID3NXK24O3SCFYMN4IFQ4BDTDF5DC01LIX3UJJQN4SZIU5JAPSR5E">Clearance Constraint (Gap=0.1mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDXFO0RRCELQCAHI1UED2DVAWVWLARZUQCHTFWXHYMXTKAZNYQ1CP">Clearance Constraint (Gap=0.1mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDVR2ZABA14QZJESWM1GSFQFOPVIVLNZB3T5ZY1NKKDGBHDFZU4DKB">Width Constraint (Min=0.15mm) (Max=0.6mm) (Preferred=0.2mm) (InNetClass('POWER'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDBON0O0LR01MBL5I5EHCXLLTTLSMB2PRVDEWLVJ25SPWOXPCZPKF">Width Constraint (Min=0.1mm) (Max=0.6mm) (Preferred=0.15mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDT32PNY3ACPH3D35CHWBRR0MHIBQQZSF4PZ0FQJBWVG5YHVYYIE1E">Length Constraint (Min=0mm) (Max=36.773mm) (InNet('CLK_0') Or InNet('CLK_1'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAGMKM3A5NFISKDFUDIICVEYFXOILPMTA5T2HLODW0RW43ZFAQGKC">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">11</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDE1F4EZMODLCAIO2MJ22S1OSWJJ0BRWCTFECS5ONOI4LRHXVNXDOP">Routing Via (MinHoleWidth=0.2mm) (MaxHoleWidth=0.3mm) (PreferredHoleWidth=0.2mm) (MinWidth=0.4mm) (MaxWidth=1mm) (PreferedWidth=0.45mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDIQGQEBIVCHD0IAQCNHSKY3MDRG1LMUEKW4TMX1HGAOCG05I1THPH">Short-Circuit Constraint (Allowed=Yes) (IsPad and not InAnyNet),(IsPad and not InAnyNet)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDTRDXI0DSRP40BGEHTKWZJM10CLNO2PKQYV2W1GJQFUA20JRCZUHI">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDRNW44AV1RO30EO02JPMCEFMKMHZW1NQL32ULD3AUIIWIYADVEPK">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">6</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDCNIS5I4VBT3PNPSDCYUYCXUVPDK25YCJW1ZYLDAOBBFMYV0KV1E">Minimum Annular Ring (Minimum=0.1mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDSGV2UXLZ4VBUMNLHEKK4QNWVGK4OCHEM21WKODN1SCJM334MLON">Component Clearance Constraint ( Horizontal Gap = 0mm, Vertical Gap = 0mm ) (InComponent('TP27')),(InComponent('U2')) </a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDHGSHD2F3WA44F4CWSGIMQHB3PDLQP5XQL3NRUCMFCIAR50EUCDIM">Component Clearance Constraint ( Horizontal Gap = 0mm, Vertical Gap = 0mm ) (InComponent('TP25')),(InComponent('TP26')) </a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQSTZYDQEKXLUNJWYX1EK1CJNNGHTZFL2ATTLHOJULJVEXXVRGVSF">Component Clearance Constraint ( Horizontal Gap = 0mm, Vertical Gap = 0mm ) (InComponent('U2')),(InComponent('TP23') or InComponent('JP21') or InComponent('JP27') or InComponent('JP24') or InComponent('JP25') or InComponent('JP26')) </a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUXVKL2OQD41TNWAFOEGGIO4EYGUKH3W3AX0IMYBM2WBRYNPCLRF">Component Clearance Constraint ( Horizontal Gap = 0mm, Vertical Gap = 0mm ) (InComponentClass('NetTie')),(All) </a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDC3CVMPBTMXNKEWTIFOIU2O3GEZN3IIV0GDA0BOENAM4SC0LIS1B">Component Clearance Constraint ( Horizontal Gap = 0mm, Vertical Gap = 0mm ) (InComponentClass('Holes, Screws etc.')),(All) </a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID0MSP4QTWEQFVVMXVJ4GFOUJUBHBPKBLL4ZVVZPYS4IB3ZHBP3EC">Component Clearance Constraint ( Horizontal Gap = 0.15mm, Vertical Gap = 0.15mm ) (All),(All) </a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDS0DGIP4H45IUJI0PCWEB4RT3XAHVV5MHEMUQWK22RWTGA5BICIP">Hole Size Constraint (Min=0.2mm) (Max=5mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDX0ICVXZZ23ZYG2JLQXHMBJ2YEKXVMSZMG35GTBYMR3V4HHM25BM">Height Constraint (Min=0mm) (Max=50mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDTYQ0HNXPJMU0PGNPYD0ZIA4Y4MUW1MNRO2C1TDF0SKEDKSAU0H4F">Hole To Hole Clearance (Gap=0.25mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDGQDN4D2BXYURMNB1NZVEGYXHQK22G2H5XTS0FQPEIYY4WIXINCYL">Minimum Solder Mask Sliver (Gap=0mm) (InComponent('U2') and IsPad and InNet('GND')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID0A1R5CCRDBIFEDGSNPSWPJVGKJXQOE2XGJGSC5RU10EFAGRVHLC">Minimum Solder Mask Sliver (Gap=0.095mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID3T0OKOSQBVXVNYUODC11PI1YROG10AC1GTDHOPNONRZDY0KPUNVO">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDY53CS1Q2PSYAFM2G30VKQ1ETONGDZMV0DGNCTUL0ETQXOERJNQEK">Rule</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">17</td>
+</tr>
+</table><br><hr><a name="IDAGMKM3A5NFISKDFUDIICVEYFXOILPMTA5T2HLODW0RW43ZFAQGKC"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3930.63mil|Location2.X=3998.504mil|Location1.Y=2674.724mil|Location2.Y=2742.598mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3930.63mil|Location2.X=3998.504mil|Location1.Y=2674.724mil|Location2.Y=2742.598mil|Absolute=True">Starved Thermal on GND: Pad U5-PAD(15.7mm,13.3mm)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4011.339mil|Location2.X=4079.213mil|Location1.Y=3135.354mil|Location2.Y=3203.228mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4011.339mil|Location2.X=4079.213mil|Location1.Y=3135.354mil|Location2.Y=3203.228mil|Absolute=True">Starved Thermal on GND: Via (17.75mm,25mm) Top Layer to Bottom Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3934.559mil|Location2.X=4002.433mil|Location1.Y=3174.718mil|Location2.Y=3242.592mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3934.559mil|Location2.X=4002.433mil|Location1.Y=3174.718mil|Location2.Y=3242.592mil|Absolute=True">Starved Thermal on GND: Via (15.8mm,26mm) Top Layer to Bottom Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3808.77mil|Location2.X=3876.644mil|Location1.Y=3017.393mil|Location2.Y=3085.267mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3808.77mil|Location2.X=3876.644mil|Location1.Y=3017.393mil|Location2.Y=3085.267mil|Absolute=True">Starved Thermal on GND: Via (12.605mm,22.004mm) Top Layer to Bottom Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3776.102mil|Location2.X=3843.976mil|Location1.Y=3018.228mil|Location2.Y=3086.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3776.102mil|Location2.X=3843.976mil|Location1.Y=3018.228mil|Location2.Y=3086.102mil|Absolute=True">Starved Thermal on GND: Via (11.775mm,22.025mm) Top Layer to Bottom Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3940.472mil|Location2.X=4008.346mil|Location1.Y=2782.992mil|Location2.Y=2850.866mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3940.472mil|Location2.X=4008.346mil|Location1.Y=2782.992mil|Location2.Y=2850.866mil|Absolute=True">Starved Thermal on POWER: Via (15.95mm,16.05mm) Top Layer to Bottom Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4084.172mil|Location2.X=4152.046mil|Location1.Y=2706.219mil|Location2.Y=2774.093mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4084.172mil|Location2.X=4152.046mil|Location1.Y=2706.219mil|Location2.Y=2774.093mil|Absolute=True">Starved Thermal on POWER: Via (19.6mm,14.1mm) Top Layer to Bottom Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3783.78mil|Location2.X=3851.653mil|Location1.Y=2670.787mil|Location2.Y=2738.661mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3783.78mil|Location2.X=3851.653mil|Location1.Y=2670.787mil|Location2.Y=2738.661mil|Absolute=True">Starved Thermal on POWER: Via (11.97mm,13.2mm) Top Layer to Bottom Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3614.291mil|Location2.X=3682.165mil|Location1.Y=2278.858mil|Location2.Y=2346.732mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3614.291mil|Location2.X=3682.165mil|Location1.Y=2278.858mil|Location2.Y=2346.732mil|Absolute=True">Starved Thermal on POWER: Via (7.665mm,3.245mm) Top Layer to Bottom Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3729.863mil|Location2.X=3797.737mil|Location1.Y=2106.809mil|Location2.Y=2174.683mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3729.863mil|Location2.X=3797.737mil|Location1.Y=2106.809mil|Location2.Y=2174.683mil|Absolute=True">Starved Thermal on POWER: Via (10.601mm,-1.125mm) Top Layer to Bottom Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3748.543mil|Location2.X=3816.417mil|Location1.Y=2066.457mil|Location2.Y=2134.331mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3748.543mil|Location2.X=3816.417mil|Location1.Y=2066.457mil|Location2.Y=2134.331mil|Absolute=True">Starved Thermal on POWER: Via (11.075mm,-2.15mm) Top Layer to Bottom Layer</acronym></a><br></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br><a name="IDRNW44AV1RO30EO02JPMCEFMKMHZW1NQL32ULD3AUIIWIYADVEPK"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3860.63mil|Location2.X=3936.904mil|Location1.Y=2682.023mil|Location2.Y=2735.3mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3860.63mil|Location2.X=3936.904mil|Location1.Y=2682.023mil|Location2.Y=2735.3mil|Absolute=True">Isolated copper: Split Plane  (GND)  on GND. Copper island connected to pads/vias detected. Copper area is : 2 sq. mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3937.928mil|Location2.X=3991.206mil|Location1.Y=2736.324mil|Location2.Y=2810.305mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3937.928mil|Location2.X=3991.206mil|Location1.Y=2736.324mil|Location2.Y=2810.305mil|Absolute=True">Isolated copper: Split Plane  (GND)  on GND. Copper island connected to pads/vias detected. Copper area is : 2 sq. mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3937.672mil|Location2.X=3991.462mil|Location1.Y=2681.767mil|Location2.Y=2735.556mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3937.672mil|Location2.X=3991.462mil|Location1.Y=2681.767mil|Location2.Y=2735.556mil|Absolute=True">Isolated copper: Split Plane  (GND)  on GND. Dead copper detected. Copper area is : 1.4 sq. mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3958.615mil|Location2.X=3970.519mil|Location1.Y=2702.709mil|Location2.Y=2714.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3958.615mil|Location2.X=3970.519mil|Location1.Y=2702.709mil|Location2.Y=2714.614mil|Absolute=True">Isolated copper: Split Plane  (GND)  on GND. Copper island connected to pads/vias detected. Copper area is : 0.08 sq. mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3897.882mil|Location2.X=3942.891mil|Location1.Y=2823.554mil|Location2.Y=2829.657mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3897.882mil|Location2.X=3942.891mil|Location1.Y=2823.554mil|Location2.Y=2829.657mil|Absolute=True">Isolated copper: Split Plane  (PULP_VCC)  on POWER. Dead copper detected. Copper area is : 0.069 sq. mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3756.638mil|Location2.X=3801.008mil|Location1.Y=2087.026mil|Location2.Y=2119.027mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3756.638mil|Location2.X=3801.008mil|Location1.Y=2087.026mil|Location2.Y=2119.027mil|Absolute=True">Isolated copper: Split Plane  (1V8)  on POWER. Copper island connected to pads/vias detected. Copper area is : 0.64 sq. mm</acronym></a><br></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br></body>
+</html>

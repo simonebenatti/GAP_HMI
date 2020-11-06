@@ -1,0 +1,103 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc
+Date     : 11/3/2020
+Time     : 11:08:29 AM
+
+Processing Rule : Clearance Constraint (Gap=0mm) (ispad and InComponent('Q1')),(IsFill)
+Rule Violations :0
+
+Processing Rule : Matched Net Lengths(Tolerance=0.2mm) (InDifferentialPair('CK2'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.1mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.1mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.15mm) (Max=0.6mm) (Preferred=0.2mm) (InNetClass('POWER'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.1mm) (Max=0.6mm) (Preferred=0.15mm) (All)
+Rule Violations :0
+
+Processing Rule : Length Constraint (Min=0mm) (Max=36.773mm) (InNet('CLK_0') Or InNet('CLK_1'))
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
+   Violation between Starved Thermal on GND: Pad U5-PAD(15.7mm,13.3mm)  Multi-Layer
+   Violation between Starved Thermal on GND: Via (17.75mm,25mm) Top Layer to Bottom Layer
+   Violation between Starved Thermal on GND: Via (15.8mm,26mm) Top Layer to Bottom Layer
+   Violation between Starved Thermal on GND: Via (12.605mm,22.004mm) Top Layer to Bottom Layer
+   Violation between Starved Thermal on GND: Via (11.775mm,22.025mm) Top Layer to Bottom Layer
+   Violation between Starved Thermal on POWER: Via (15.95mm,16.05mm) Top Layer to Bottom Layer
+   Violation between Starved Thermal on POWER: Via (19.6mm,14.1mm) Top Layer to Bottom Layer
+   Violation between Starved Thermal on POWER: Via (11.97mm,13.2mm) Top Layer to Bottom Layer
+   Violation between Starved Thermal on POWER: Via (7.665mm,3.245mm) Top Layer to Bottom Layer
+   Violation between Starved Thermal on POWER: Via (10.601mm,-1.125mm) Top Layer to Bottom Layer
+   Violation between Starved Thermal on POWER: Via (11.075mm,-2.15mm) Top Layer to Bottom Layer
+Rule Violations :11
+
+Processing Rule : Routing Via (MinHoleWidth=0.2mm) (MaxHoleWidth=0.3mm) (PreferredHoleWidth=0.2mm) (MinWidth=0.4mm) (MaxWidth=1mm) (PreferedWidth=0.45mm) (All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=Yes) (IsPad and not InAnyNet),(IsPad and not InAnyNet)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+   Violation between Isolated copper: Split Plane  (GND)  on GND. Copper island connected to pads/vias detected. Copper area is : 2 sq. mm
+   Violation between Isolated copper: Split Plane  (GND)  on GND. Copper island connected to pads/vias detected. Copper area is : 2 sq. mm
+   Violation between Isolated copper: Split Plane  (GND)  on GND. Dead copper detected. Copper area is : 1.4 sq. mm
+   Violation between Isolated copper: Split Plane  (GND)  on GND. Copper island connected to pads/vias detected. Copper area is : 0.08 sq. mm
+   Violation between Isolated copper: Split Plane  (PULP_VCC)  on POWER. Dead copper detected. Copper area is : 0.069 sq. mm
+   Violation between Isolated copper: Split Plane  (1V8)  on POWER. Copper island connected to pads/vias detected. Copper area is : 0.64 sq. mm
+Rule Violations :6
+
+Processing Rule : Minimum Annular Ring (Minimum=0.1mm) (All)
+Rule Violations :0
+
+Processing Rule : Component Clearance Constraint ( Horizontal Gap = 0mm, Vertical Gap = 0mm ) (InComponent('TP27')),(InComponent('U2')) 
+Rule Violations :0
+
+Processing Rule : Component Clearance Constraint ( Horizontal Gap = 0mm, Vertical Gap = 0mm ) (InComponent('TP25')),(InComponent('TP26')) 
+Rule Violations :0
+
+Processing Rule : Component Clearance Constraint ( Horizontal Gap = 0mm, Vertical Gap = 0mm ) (InComponent('U2')),(InComponent('TP23') or InComponent('JP21') or InComponent('JP27') or InComponent('JP24') or InComponent('JP25') or InComponent('JP26')) 
+Rule Violations :0
+
+Processing Rule : Component Clearance Constraint ( Horizontal Gap = 0mm, Vertical Gap = 0mm ) (InComponentClass('NetTie')),(All) 
+Rule Violations :0
+
+Processing Rule : Component Clearance Constraint ( Horizontal Gap = 0mm, Vertical Gap = 0mm ) (InComponentClass('Holes, Screws etc.')),(All) 
+Rule Violations :0
+
+Processing Rule : Component Clearance Constraint ( Horizontal Gap = 0.15mm, Vertical Gap = 0.15mm ) (All),(All) 
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.2mm) (Max=5mm) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=50mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=0.25mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0mm) (InComponent('U2') and IsPad and InNet('GND')),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0.095mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mm) (All)
+Rule Violations :0
+
+Processing Rule : Rule
+Rule Violations :0
+
+
+Violations Detected : 17
+Time Elapsed        : 00:00:06
