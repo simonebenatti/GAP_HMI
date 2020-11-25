@@ -1,6 +1,0 @@
-Added Component: Designator=Y1(ABRA-ABS07-2_V)
-Added Pin To Net: NetName=NetC15_2 Pin=Y1-1
-Added Pin To Net: NetName=NetC14_2 Pin=Y1-2
-Added Member To Class: ClassName=GAPandPeripherals Member=Component Y1 ABS07AIG-32.768kHz-9-1-T
-Added Room: Name=Communications
-Added Room: Name=GAPandPeripherals

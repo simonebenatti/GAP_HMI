@@ -1,7 +1,0 @@
-Removed Pin From Net: NetName=\C\S\1\0\ Pin=I1-1
-Removed Pin From Net: NetName=NetR3_1 Pin=R3-1
-Removed Pin From Net: NetName=NetR3_1 Pin=U4-3
-Removed Member From Class: ClassName=GAPandPeripherals Member=I1
-Removed Member From Class: ClassName=GAPandPeripherals Member=I2
-Added Pin To Net: NetName=NetR3_1 Pin=R3-1
-Added Pin To Net: NetName=NetR3_1 Pin=U4-3
