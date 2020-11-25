@@ -1,0 +1,19 @@
+Added Component: Designator=I1(Pin Header, 1x2, TH)
+Added Component: Designator=I2(Pin Header, 1x2, TH)
+Added Component: Designator=J1(20021111-00010T4LF)
+Added Pin To Net: NetName=1V8 Pin=I1-1
+Added Pin To Net: NetName=Spare_I2C.SDA Pin=I2-1
+Added Pin To Net: NetName=GND Pin=I2-2
+Added Pin To Net: NetName=1V8 Pin=J1-1
+Added Pin To Net: NetName=PULP_JTAG.TMS Pin=J1-2
+Added Pin To Net: NetName=GND Pin=J1-3
+Added Pin To Net: NetName=PULP_JTAG.TCK Pin=J1-4
+Added Pin To Net: NetName=GND Pin=J1-5
+Added Pin To Net: NetName=PULP_JTAG.TDO Pin=J1-6
+Added Pin To Net: NetName=PULP_\R\S\T\ Pin=J1-7
+Added Pin To Net: NetName=PULP_JTAG.TDI Pin=J1-8
+Added Pin To Net: NetName=GND Pin=J1-9
+Added Pin To Net: NetName=PULP_JTAG.\T\R\S\T\ Pin=J1-10
+Added Member To Class: ClassName=GAPandPeripherals Member=Component I1 GRPB012VWVN-RC
+Added Member To Class: ClassName=GAPandPeripherals Member=Component I2 GRPB012VWVN-RC
+Added Member To Class: ClassName=GAPandPeripherals Member=Component J1 20021111-00010T4LF

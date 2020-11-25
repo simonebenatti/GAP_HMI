@@ -1,0 +1,5 @@
+Change Component Footprint: Designator=J1.0 Old Footprint=UJMPR New Footprint=UJMPR
+Change Component Footprint: Designator=J1.1 Old Footprint=UJMPR New Footprint=UJMPR
+Change Component Footprint: Designator=J2.0 Old Footprint=UJMPR New Footprint=UJMPR
+Change Component Footprint: Designator=J2.1 Old Footprint=UJMPR New Footprint=UJMPR
+Change Net Name : Old Net Name=GND New Net Name=AGND

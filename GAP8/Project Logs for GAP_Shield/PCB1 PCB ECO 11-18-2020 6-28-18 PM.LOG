@@ -1,0 +1,8 @@
+Added Component: Designator=X3(ABRA-ABS07-2_V)
+Added Pin To Net: NetName=NetC22_2 Pin=X3-1
+Added Pin To Net: NetName=NetC29_2 Pin=X3-2
+Added Member To Class: ClassName=Communications Member=Component C43 1.0µF
+Added Member To Class: ClassName=Communications Member=Component C44 100nF
+Added Member To Class: ClassName=Communications Member=Component C45 12pF
+Added Member To Class: ClassName=Communications Member=Component R10 Res3
+Added Member To Class: ClassName=GAPandPeripherals Member=Component X3 ABS07AIG-32.768kHz-9-1-T

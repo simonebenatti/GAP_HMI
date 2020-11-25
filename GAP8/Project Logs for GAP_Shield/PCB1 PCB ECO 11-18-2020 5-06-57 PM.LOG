@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=NetR3_1 Pin=R3-1
+Removed Pin From Net: NetName=NetR3_1 Pin=U4-3
+Added Component: Designator=P1(HDR1X8)
+Added Component: Designator=P2(HDR1X8)
+Added Pin To Net: NetName=NetR3_1 Pin=R3-1
+Added Pin To Net: NetName=NetR3_1 Pin=U4-3
+Added Member To Class: ClassName=GAPandPeripherals Member=Component I3 GRPB012VWVN-RC
+Added Member To Class: ClassName=Power Member=Component P1 Header 8
+Added Member To Class: ClassName=Power Member=Component P2 Header 8

@@ -1,0 +1,9 @@
+Added Component: Designator=C48(cap_0402_R - modified)
+Added Component: Designator=C49(cap_0402_R - modified)
+Added Pin To Net: NetName=GND Pin=C48-1
+Added Pin To Net: NetName=VCOM_CF Pin=C48-2
+Added Pin To Net: NetName=VCOM_CF Pin=C49-1
+Added Pin To Net: NetName=GND Pin=C49-2
+Added Pin To Net: NetName=VCOM_CF Pin=P1-1
+Added Member To Class: ClassName=Power Member=Component C48 Cap
+Added Member To Class: ClassName=Power Member=Component C49 Cap

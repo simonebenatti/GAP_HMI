@@ -1,0 +1,4 @@
+Change Component Footprint: Designator=J1 Old Footprint=20021111-00010T4LF New Footprint=20021111-00010T4LF
+Change Component Footprint: Designator=I1 Old Footprint=Pin Header, 1x2, TH New Footprint=Pin Header, 1x2, TH
+Change Component Footprint: Designator=I2 Old Footprint=Pin Header, 1x2, TH New Footprint=Pin Header, 1x2, TH
+Added Pin To Net: NetName=Spare_I2C.SCL Pin=I1-2
