@@ -173,6 +173,40 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [Document9]
+DocumentPath=CM.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=TFMIQYFP
+
+[Document10]
+DocumentPath=Custom.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=QTTCDWYE
+
+[Document11]
 DocumentPath=PCB2_DEMO_BOARD_t.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -189,7 +223,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=TCYDORAJ
 
-[Document10]
+[Document12]
 DocumentPath=Demo_Board_library_PCB.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -206,7 +240,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=FQCEWETF
 
-[Document11]
+[Document13]
 DocumentPath=WOLFMAN_16ch.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -223,7 +257,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=CLIBQLKB
 
-[Document12]
+[Document14]
 DocumentPath=GAP_Shield.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -240,7 +274,41 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=LJRUWSJJ
 
-[Document13]
+[Document15]
+DocumentPath=CM.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=HSNQTLCB
+
+[Document16]
+DocumentPath=Custom.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=QDQGFFGM
+
+[Document17]
 DocumentPath=GAP_Shield.SCHLIB
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -257,7 +325,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=VOSCIBMI
 
-[Document14]
+[Document18]
 DocumentPath=Demo_Board_library_SCH.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -274,7 +342,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=LAUFJVTO
 
-[Document15]
+[Document19]
 DocumentPath=Communications.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
