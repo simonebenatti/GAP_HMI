@@ -1,0 +1,6 @@
+Change Component DesignItemId : Designator=R1 Old DesignItemId=CMP-2002-00607-3 New DesignItemId=Res2
+Change Component DesignItemId : Designator=R7 Old DesignItemId=CMP-2002-00607-3 New DesignItemId=Res2
+Change Component Footprint: Designator=R7 Old Footprint=res_0402_R - modified New Footprint=cap_0402_R - modified
+Change Component Footprint: Designator=R1 Old Footprint=RESC1609X50X30NL8T20 New Footprint=cap_0402_R - modified
+Change Component Comment : Designator=R1 Old Comment=10k New Comment=R
+Change Component Comment : Designator=R7 Old Comment=10k New Comment=R
