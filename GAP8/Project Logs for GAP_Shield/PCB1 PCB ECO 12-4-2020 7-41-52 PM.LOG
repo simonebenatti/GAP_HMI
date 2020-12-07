@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=GND Pin=P2-1
+Removed Member From Class: ClassName=GAPandPeripherals Member=P2
+Added Pin To Net: NetName=PULP_SPI_3V0.MOSI Pin=P2-1
+Added Pin To Net: NetName=PULP_SPI_3V0.MISO Pin=P2-2
+Added Pin To Net: NetName=PULP_SPI_3V0.SCK Pin=P2-3
+Added Pin To Net: NetName=SPI_CS0_3V0 Pin=P2-4
+Added Pin To Net: NetName=GND Pin=P2-8
+Added Member To Class: ClassName=Power Member=Component P2 Header 8

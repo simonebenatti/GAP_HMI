@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=PULP_SPI_3V0.MOSI Pin=P2-1
+Removed Pin From Net: NetName=PULP_SPI_3V0.MISO Pin=P2-2
+Removed Pin From Net: NetName=PULP_SPI_3V0.SCK Pin=P2-3
+Removed Pin From Net: NetName=SPI_CS0_3V0 Pin=P2-4
+Added Pin To Net: NetName=SPI_CS0_3V0 Pin=P2-1

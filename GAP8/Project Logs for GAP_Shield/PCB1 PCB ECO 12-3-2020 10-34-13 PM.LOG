@@ -1,0 +1,2 @@
+Removed Pin From Net: NetName=CHG_IN Pin=P1-3
+Added Pin To Net: NetName=CHG_IN Pin=P1-2

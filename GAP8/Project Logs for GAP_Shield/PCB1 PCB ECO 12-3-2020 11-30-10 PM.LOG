@@ -1,0 +1,5 @@
+Added Component: Designator=R?(res_0402_R - modified)
+Added Pin To Net: NetName=P0.25 Pin=R?-1
+Added Pin To Net: NetName=CM_CHARGE_ENA Pin=R?-2
+Added Pin To Net: NetName=CM_CHARGE_I Pin=U6-38
+Added Member To Class: ClassName=Communications Member=Component R? Res3
