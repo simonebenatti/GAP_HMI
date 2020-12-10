@@ -1,74 +1,9 @@
 Protel Design System Design Rule Check
-PCB File : D:\ALTIUM DESIGN BOARD\GAP_HMI\GAP8\PCB1.PcbDoc
-Date     : 07/12/2020
-Time     : 18:38:52
+PCB File : C:\Users\simon\Documents\ALTIUM\GAP_HMI\GAP8\PCB1.PcbDoc
+Date     : 12/9/2020
+Time     : 6:06:55 PM
 
-Processing Rule : Rule
-Rule Violations :0
-
-Processing Rule : Net Antennae (Tolerance=0mil) (All)
-Rule Violations :0
-
-Processing Rule : Minimum Solder Mask Sliver (Gap=3.898mil) (Disabled)(All),(All)
-Rule Violations :0
-
-Processing Rule : Hole To Hole Clearance (Gap=4mil) (All),(All)
-Rule Violations :0
-
-Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
-Rule Violations :0
-
-Processing Rule : Hole Size Constraint (Min=7.874mil) (Max=100000mil) (All)
-Rule Violations :0
-
-Processing Rule : Component Clearance Constraint ( Horizontal Gap = 5mil, Vertical Gap = 5mil ) (All),(All) 
-Rule Violations :0
-
-Processing Rule : Un-Routed Net Constraint ( (All) )
-Rule Violations :0
-
-Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
-   Violation between Via (676.02mil,1049.213mil) Top Layer to Bottom Layer and 
-                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
-   Violation between Via (676.02mil,1143.701mil) Top Layer to Bottom Layer and 
-                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
-   Violation between Via (676.02mil,1190.945mil) Top Layer to Bottom Layer and 
-                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
-   Violation between Via (770.508mil,1049.213mil) Top Layer to Bottom Layer and 
-                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
-   Violation between Via (770.508mil,1143.701mil) Top Layer to Bottom Layer and 
-                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
-   Violation between Via (770.508mil,1190.945mil) Top Layer to Bottom Layer and 
-                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
-   Violation between Via (676.02mil,1096.457mil) Top Layer to Bottom Layer and 
-                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
-   Violation between Via (770.508mil,1096.457mil) Top Layer to Bottom Layer and 
-                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
-   Violation between Via (723.264mil,1049.213mil) Top Layer to Bottom Layer and 
-                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
-   Violation between Via (817.752mil,1049.213mil) Top Layer to Bottom Layer and 
-                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
-   Violation between Via (817.752mil,1143.701mil) Top Layer to Bottom Layer and 
-                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
-   Violation between Via (723.264mil,1143.701mil) Top Layer to Bottom Layer and 
-                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
-   Violation between Via (817.752mil,1190.945mil) Top Layer to Bottom Layer and 
-                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
-   Violation between Via (723.264mil,1190.945mil) Top Layer to Bottom Layer and 
-                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
-   Violation between Via (817.752mil,1096.457mil) Top Layer to Bottom Layer and 
-                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
-   Violation between Via (723.264mil,1096.457mil) Top Layer to Bottom Layer and 
-                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
-Rule Violations :16
-
-Processing Rule : Routing Via (MinHoleWidth=7.874mil) (MaxHoleWidth=20mil) (PreferredHoleWidth=11.811mil) (MinWidth=15.748mil) (MaxWidth=30mil) (PreferedWidth=23.622mil) (All)
-Rule Violations :0
-
-Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
-Rule Violations :0
-
-Processing Rule : Width Constraint (Min=3.937mil) (Max=118.11mil) (Preferred=5.905mil) (All)
+Processing Rule : Matched Net Lengths(Tolerance=10mil) (InNetClass('CLOCKDIFF'))
 Rule Violations :0
 
 Processing Rule : Clearance Constraint (Gap=3.937mil) (All),(All)
@@ -76,36 +11,104 @@ Processing Rule : Clearance Constraint (Gap=3.937mil) (All),(All)
                      Pad U6-49(746.886mil,1120.079mil)  Top Layer
    Violation between Via (676.02mil,1143.701mil) Top Layer to Bottom Layer and 
                      Pad U6-49(746.886mil,1120.079mil)  Top Layer
+   Violation between Via (770.508mil,1049.213mil) Top Layer to Bottom Layer and 
+                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
+   Violation between Via (770.508mil,1143.701mil) Top Layer to Bottom Layer and 
+                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
    Violation between Via (676.02mil,1190.945mil) Top Layer to Bottom Layer and 
+                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
+   Violation between Via (676.02mil,1096.457mil) Top Layer to Bottom Layer and 
+                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
+   Violation between Via (770.508mil,1190.945mil) Top Layer to Bottom Layer and 
+                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
+   Violation between Via (770.508mil,1096.457mil) Top Layer to Bottom Layer and 
+                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
+   Violation between Via (817.752mil,1049.213mil) Top Layer to Bottom Layer and 
+                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
+   Violation between Via (723.264mil,1049.213mil) Top Layer to Bottom Layer and 
+                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
+   Violation between Via (723.264mil,1143.701mil) Top Layer to Bottom Layer and 
+                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
+   Violation between Via (817.752mil,1143.701mil) Top Layer to Bottom Layer and 
+                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
+   Violation between Via (723.264mil,1190.945mil) Top Layer to Bottom Layer and 
+                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
+   Violation between Via (723.264mil,1096.457mil) Top Layer to Bottom Layer and 
+                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
+   Violation between Via (817.752mil,1096.457mil) Top Layer to Bottom Layer and 
+                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
+   Violation between Via (817.752mil,1190.945mil) Top Layer to Bottom Layer and 
+                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
+Rule Violations :16
+
+Processing Rule : Width Constraint (Min=3.937mil) (Max=118.11mil) (Preferred=5.905mil) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Routing Via (MinHoleWidth=7.874mil) (MaxHoleWidth=20mil) (PreferredHoleWidth=11.811mil) (MinWidth=15.748mil) (MaxWidth=30mil) (PreferedWidth=23.622mil) (All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+   Violation between Via (676.02mil,1049.213mil) Top Layer to Bottom Layer and 
+                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
+   Violation between Via (676.02mil,1143.701mil) Top Layer to Bottom Layer and 
                      Pad U6-49(746.886mil,1120.079mil)  Top Layer
    Violation between Via (770.508mil,1049.213mil) Top Layer to Bottom Layer and 
                      Pad U6-49(746.886mil,1120.079mil)  Top Layer
    Violation between Via (770.508mil,1143.701mil) Top Layer to Bottom Layer and 
                      Pad U6-49(746.886mil,1120.079mil)  Top Layer
-   Violation between Via (770.508mil,1190.945mil) Top Layer to Bottom Layer and 
+   Violation between Via (676.02mil,1190.945mil) Top Layer to Bottom Layer and 
                      Pad U6-49(746.886mil,1120.079mil)  Top Layer
    Violation between Via (676.02mil,1096.457mil) Top Layer to Bottom Layer and 
                      Pad U6-49(746.886mil,1120.079mil)  Top Layer
-   Violation between Via (770.508mil,1096.457mil) Top Layer to Bottom Layer and 
+   Violation between Via (770.508mil,1190.945mil) Top Layer to Bottom Layer and 
                      Pad U6-49(746.886mil,1120.079mil)  Top Layer
-   Violation between Via (723.264mil,1049.213mil) Top Layer to Bottom Layer and 
+   Violation between Via (770.508mil,1096.457mil) Top Layer to Bottom Layer and 
                      Pad U6-49(746.886mil,1120.079mil)  Top Layer
    Violation between Via (817.752mil,1049.213mil) Top Layer to Bottom Layer and 
                      Pad U6-49(746.886mil,1120.079mil)  Top Layer
-   Violation between Via (817.752mil,1143.701mil) Top Layer to Bottom Layer and 
+   Violation between Via (723.264mil,1049.213mil) Top Layer to Bottom Layer and 
                      Pad U6-49(746.886mil,1120.079mil)  Top Layer
    Violation between Via (723.264mil,1143.701mil) Top Layer to Bottom Layer and 
                      Pad U6-49(746.886mil,1120.079mil)  Top Layer
-   Violation between Via (817.752mil,1190.945mil) Top Layer to Bottom Layer and 
+   Violation between Via (817.752mil,1143.701mil) Top Layer to Bottom Layer and 
                      Pad U6-49(746.886mil,1120.079mil)  Top Layer
    Violation between Via (723.264mil,1190.945mil) Top Layer to Bottom Layer and 
                      Pad U6-49(746.886mil,1120.079mil)  Top Layer
+   Violation between Via (723.264mil,1096.457mil) Top Layer to Bottom Layer and 
+                     Pad U6-49(746.886mil,1120.079mil)  Top Layer
    Violation between Via (817.752mil,1096.457mil) Top Layer to Bottom Layer and 
                      Pad U6-49(746.886mil,1120.079mil)  Top Layer
-   Violation between Via (723.264mil,1096.457mil) Top Layer to Bottom Layer and 
+   Violation between Via (817.752mil,1190.945mil) Top Layer to Bottom Layer and 
                      Pad U6-49(746.886mil,1120.079mil)  Top Layer
 Rule Violations :16
 
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Component Clearance Constraint ( Horizontal Gap = 5mil, Vertical Gap = 5mil ) (All),(All) 
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=7.874mil) (Max=100000mil) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=4mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=3.898mil) (Disabled)(All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Rule
+Rule Violations :0
+
 
 Violations Detected : 32
-Time Elapsed        : 00:00:01
+Time Elapsed        : 00:00:02

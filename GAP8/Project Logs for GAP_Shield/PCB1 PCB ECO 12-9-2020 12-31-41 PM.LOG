@@ -1,0 +1,3 @@
+Removed Member From Class: ClassName=MEMORY_BUS Member=Mem_\R\S\T\O\1
+Removed Member From Class: ClassName=MEMORY_BUS Member=Mem_INT1
+Added Class: Name=CLK_BUS
