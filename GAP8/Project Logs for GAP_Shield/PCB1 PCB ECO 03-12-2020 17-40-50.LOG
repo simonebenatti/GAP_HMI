@@ -1,8 +1,0 @@
-Added Component: Designator=R14(0402)
-Added Component: Designator=R15(0402)
-Added Pin To Net: NetName=GND Pin=R14-1
-Added Pin To Net: NetName=NetC28_1 Pin=R14-2
-Added Pin To Net: NetName=GND Pin=R15-1
-Added Pin To Net: NetName=CM_CHARGE_ENA Pin=R15-2
-Added Member To Class: ClassName=BatteryCharge Member=Component R14 ERJ-2BQF1R0X
-Added Member To Class: ClassName=BatteryCharge Member=Component R15 ERJ-2RKF1004X

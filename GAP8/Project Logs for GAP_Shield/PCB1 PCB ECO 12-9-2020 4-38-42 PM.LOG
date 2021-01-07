@@ -1,8 +1,0 @@
-Added Pin To Net: NetName=GPIO_A3_3V0 Pin=P1-4
-Added Pin To Net: NetName=GPIO_A2_3V0 Pin=P1-5
-Added Pin To Net: NetName=NetP1_3 Pin=P1-3
-Added Pin To Net: NetName=NetP1_3 Pin=U2-16
-Added Net: Name=NetP1_3
-Added Pin To Net: NetName=NetP1_7 Pin=P1-7
-Added Pin To Net: NetName=NetP1_7 Pin=U2-11
-Added Net: Name=NetP1_7

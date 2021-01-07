@@ -1,6 +1,0 @@
-Removed Pin From Net: NetName=1V8 Pin=I1-1
-Removed Pin From Net: NetName=Spare_I2C.SCL Pin=I1-2
-Removed Pin From Net: NetName=Spare_I2C.SDA Pin=I2-1
-Removed Pin From Net: NetName=GND Pin=I2-2
-Removed Member From Class: ClassName=GAPandPeripherals Member=I1
-Removed Member From Class: ClassName=GAPandPeripherals Member=I2
