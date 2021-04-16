@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=GND Pin=C53-1
+Removed Pin From Net: NetName=GND Pin=C54-2
+Removed Pin From Net: NetName=VCOM Pin=R21-2
+Removed Pin From Net: NetName=VCOM Pin=U8-1
+Removed Pin From Net: NetName=GND Pin=U8-2
+Removed Member From Class: ClassName=Power Member=C53
+Removed Member From Class: ClassName=Power Member=C54
+Removed Member From Class: ClassName=Power Member=R21
+Removed Member From Class: ClassName=Power Member=U8

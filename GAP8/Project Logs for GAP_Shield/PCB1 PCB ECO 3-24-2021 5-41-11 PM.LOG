@@ -1,0 +1,8 @@
+Added Component: Designator=C53(0402)
+Added Component: Designator=C54(0402)
+Added Pin To Net: NetName=GND Pin=C53-1
+Added Pin To Net: NetName=1V8 Pin=C53-2
+Added Pin To Net: NetName=GND Pin=C54-1
+Added Pin To Net: NetName=1V8 Pin=C54-2
+Added Member To Class: ClassName=GAPandPeripherals Member=Component C53 Cap Semi
+Added Member To Class: ClassName=GAPandPeripherals Member=Component C54 Cap Semi
